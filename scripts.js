@@ -90,6 +90,11 @@ function updateTotals() {
     expensesQuantity.textContent = `${items.length} ${
       items.length > 1 ? "despesas" : "despesa"
     }`
+
+    let total = 0
+    for (let item = 0; item < items.length; item++) {
+      const itemAmount = items[item].querySelector(".expense-amount")
+    }
   } catch (error) {
     console.log(error)
     alert("Não foi possível atualizar os totais.")
