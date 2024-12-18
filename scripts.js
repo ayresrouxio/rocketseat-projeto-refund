@@ -62,10 +62,15 @@ function expenseAdd(newExpense) {
       .toUpperCase()
       .replace("R$", "")}`
 
+    const removeIcon = document.createElement("img")
+    removeIcon.classList.add("remove-icon")
+    removeIcon.setAttribute("src", "./img/remove.svg")
+    removeIcon.setAttribute("alt", "remover")
+
     // monta o html
     expenseInfo.append(expenseName, expenseCategory)
 
-    expenseItem.append(expenseIcon, expenseInfo, expenseAmount)
+    expenseItem.append(expenseIcon, expenseInfo, expenseAmount, removeIcon)
 
     expenseList.append(expenseItem)
   } catch (error) {
